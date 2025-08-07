@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f0f1a;
+}
+
+
+.navbar {
+    height: 60px;
+    width: 80%;
+    margin: 0px auto; /* centers the navbar horizontally, no margin on top and bottom, automatic margin on left and right */
+    /* background-color: #0a1a2f; */
+    background-color: #1f1f2e;
+
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px; /* clean and proportional rounded corners */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.1); /* translucent white */
+    backdrop-filter: blur(10px);          /* frosted blur effect */
+    -webkit-backdrop-filter: blur(10px);  /* Safari support */
+
+    border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+    
+}
+
+.nav_left {
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+    min-width: 250px;
+    justify-content: space-evenly;
+}
+
+.nav_name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #00ffe0, #0077ff);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px #00ffe0, 0 0 20px #0077ff;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    /* margin-left: 40px; */
+}
+
+.nav_name:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 15px #00ffe0, 0 0 30px #0077ff;
+}
+
+.nav_text_1 {
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.nav_text_2 {
+    font-size: 1.2rem;
+    text-align: left;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.nav_right {
+    display: flex;
+    align-items: center;
+    margin-right: 45px;
+    min-width: 280px;
+    justify-content: space-evenly;
+}
+
+.nav_start_testing {
+    height: 40px;
+    width: 100px;
+    background-color: #ff9100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.nav_start_testing:hover {
+    border: 2px solid white;
+}
+
+.hero {
+    height: 60vh;
+    width: 100%;
+    background-image: url('image1.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+/* Image upload section */
+
+.upload_section {
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, #1f1f2e, #0a0a1a);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .upload_box {
+    border: 2px dashed #00ffe0;
+    border-radius: 20px;
+    padding: 50px 70px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 255, 224, 0.2), 0 0 40px rgba(0, 119, 255, 0.15);
+    transition: all 0.4s ease;
+    text-align: center;
+  }
+  
+  .upload_box:hover {
+    background: rgba(0, 255, 224, 0.05);
+    box-shadow: 0 0 25px #00ffe0, 0 0 60px #0077ff;
+    /* transform: scale(1.03); */
+  }
+  
+  .upload_box i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite ease-in-out;
+    color: #00ffe0;
+  }
+  
+  .upload_box span {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      text-shadow: 0 0 5px #00ffe0;
+    }
+    50% {
+      text-shadow: 0 0 20px #00ffe0, 0 0 30px #0077ff;
+    }
+    100% {
+      text-shadow: 0 0 5px #00ffe0;
+    }
+  }
+  
+/* camera Section */
+
+  .Camera_section {
+    /* padding: 80px 0; */
+    padding-bottom: 80px;
+    background: linear-gradient(180deg, #0f0f1a, #1f1f2e);
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .camsec_heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(90deg, #00ffe0, #0077ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .camera_grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 20px;
+    padding: 0 50px;
+    justify-items: center;
+  }
+  
+  .camerabox {
+    width: 180px;
+    height: 120px;
+    background-color: #1e1e2f;
+    border: 2px solid #00ffe0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 224, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .camerabox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .camerabox:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1) contrast(1.2);
+    box-shadow: inset 0 0 20px rgba(0, 255, 224, 0.2), 0 0 40px rgba(0, 119, 255, 0.25);
+    transition: all 0.3s ease-in-out;
+  }
+
+  
+  
+  
