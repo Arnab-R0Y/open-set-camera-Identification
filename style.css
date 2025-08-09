@@ -17,8 +17,8 @@ body {
 .navbar {
     height: 60px;
     width: 80%;
-    margin: 0px auto;
-    /* centers the navbar horizontally, no margin on top and bottom, automatic margin on left and right */
+    margin: 0px auto; /* centers the navbar horizontally, no margin on top and bottom, automatic margin on left and right */
+
     /* background-color: #0a1a2f; */
     background-color: #1f1f2e;
 
@@ -27,7 +27,6 @@ body {
     align-items: center;
     justify-content: space-between;
     border-radius: 50px;
-    /* clean and proportional rounded corners */
     position: fixed;
     top: 0;
     left: 0;
@@ -57,7 +56,7 @@ body {
   }
   
   .nav_left a:hover {
-    color: orange; /* or whatever hover effect you want */
+    color: orange;
   }
   
   .nav_left a:active {
@@ -75,7 +74,7 @@ body {
 
 .nav_name {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*Since .nav_name contains two divs (nav_text_1 and nav_text_2), this puts one text line above the other. */
     justify-content: center;
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
@@ -134,13 +133,40 @@ body {
     height: 60vh;
     width: 100%;
     background-image: url('image1.jpg');
-    /* Replace with your image path */
     background-size: cover;
     background-position: center;
     position: relative;
     z-index: 1;
 }
 
+@media (max-width: 1100px) {
+    .navbar {
+      width: 100%;
+      border-radius: 0px;
+      /* padding: 0 15px; */
+    }
+  }
+
+@media (max-width: 850px) {
+    .navbar {
+      width: 100%;
+      border-radius: 0px;
+      /* padding: 0 15px; */
+    }
+
+    .nav_left {
+        margin-left: 0px;
+        min-width: 230px;
+    }
+
+    .nav_right {
+        margin-right: 0px;
+        min-width: 230px;
+    }
+
+
+  }
+  
 
 
 
@@ -207,7 +233,6 @@ body {
 /* camera Section */
 
 .Camera_section {
-    /* padding: 80px 0; */
     padding-bottom: 80px;
     background: linear-gradient(180deg, #0f0f1a, #1f1f2e);
     text-align: center;
@@ -227,10 +252,30 @@ body {
 .camera_grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    /* 5 columns */
-    gap: 20px;
+    gap: 20px 20px;
     padding: 0 50px;
     justify-items: center;
+}
+
+@media (max-width: 1100px) {
+    .camera_grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 850px) {
+    .camera_grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 620px) {
+    .camera_grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        padding: 0 20px;
+    }
 }
 
 .camerabox {
@@ -300,7 +345,7 @@ body {
 }
 
 .about_container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: left;
 }
