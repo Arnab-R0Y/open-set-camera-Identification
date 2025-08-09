@@ -45,6 +45,39 @@ body {
 
 }
 
+.hamburger {
+  display: none; /* hidden on desktop */
+  cursor: pointer;
+  color: white;
+  font-size: 1.8rem;
+  margin-right: 20px;
+}
+
+.mobile-menu {
+  display: none; /* hidden by default */
+  flex-direction: column;
+  background-color: #1f1f2e;
+  position: fixed;
+  top: 60px; /* just below navbar */
+  width: 100%;
+  left: 0;
+  z-index: 1001;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-menu a {
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu a:hover {
+  background-color: rgba(0, 255, 224, 0.1);
+}
+
+
+
 /* This will ONLY style links inside .navbar */
 .navbar a {
     color: white;
@@ -167,6 +200,24 @@ body {
 
   }
   
+@media (max-width: 750px) {
+  .nav_right .nav_login {
+    display: none; /* hide normal nav */
+  }
+
+  .nav_left {
+    display: none !important;
+  }  
+
+  .nav_right {
+    min-width: 100px !important
+  }
+
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+}
+
 
 
 
